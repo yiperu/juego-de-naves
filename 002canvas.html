@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+
+    </title>
+        <style type="text/css">
+            canvas{
+                border:2px solid green;
+            }
+        </style>
+</head>
+<body>
+    <canvas id='micanvas' width='200' height='200'>
+        Tu navegador no soporta canvas
+    </canvas>
+    <script type="text/javascript">
+        window.addEventListener('load',init);
+        function init(){
+            var canvas = document.getElementById('micanvas');
+            var ctx = canvas.getContext('2d');
+            ctx.fillRect(20,20,50,50);
+
+            console.log("Cargado");
+        }
+    </script>
+</body>
+
+</html>
