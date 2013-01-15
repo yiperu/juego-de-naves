@@ -20,15 +20,12 @@
             var canvas = document.getElementById('micanvas');
             var ctx = canvas.getContext('2d');
 
-            var x=10, y=10, ancho=20, alto=40;
-            ctx.fillRect(x,y,ancho,alto);
-            ctx.strokeRect(x+30,y,ancho,alto);
-            console.log(ctx);
-            erase(canvas,ctx);
+            ctx.arc(50,50,30,a_radianes(90),a_radianes(180),true);
+            ctx.arc(108,108,50,a_radianes(90),a_radianes(180),true);
+            ctx.stroke();
         }
-
-        function erase(parametroCanvas, parametroContexto){
-            parametroContexto.clearRect(5,20,parametroCanvas.width,parametroCanvas.height);
+        function a_radianes(grados){
+            return (grados*Math.PI)/180;
         }
 
     </script>
