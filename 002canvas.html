@@ -19,24 +19,18 @@
         function init(){
             var canvas = document.getElementById('micanvas');
             var ctx = canvas.getContext('2d');
-            console.log(ctx);
-            ctx.globalAlpha = 0.5;
-            ctx.fillStyle = 'red';
-            ctx.fillRect(20,20,50,50);
-            ctx.fillStyle = 'blue';
-            ctx.fillRect(40,40,50,50);
-            ctx.strokeStyle = 'red';
-            ctx.strokeRect(90,90,50,50);
-            ctx.fillStyle = 'rgba(250,0,0,0.5)';
-            ctx.fillRect(140,20,50,50);
-            ctx.fillStyle = 'rgba(250,0,0,0.7)';
-            ctx.fillRect(200,20,50,50);
-            ctx.fillStyle = 'rgba(250,0,0,0.9)';
-            ctx.fillRect(260,20,50,50);
-            ctx.lineWidth = 3;
-            ctx.strokeRect(150,90,50,50);
 
+            var x=10, y=10, ancho=20, alto=40;
+            ctx.fillRect(x,y,ancho,alto);
+            ctx.strokeRect(x+30,y,ancho,alto);
+            console.log(ctx);
+            erase(canvas,ctx);
         }
+
+        function erase(parametroCanvas, parametroContexto){
+            parametroContexto.clearRect(5,20,parametroCanvas.width,parametroCanvas.height);
+        }
+
     </script>
 </body>
 
