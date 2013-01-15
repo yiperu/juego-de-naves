@@ -11,7 +11,7 @@
         </style>
 </head>
 <body>
-    <canvas id='micanvas' width='200' height='200'>
+    <canvas id='micanvas' width='400' height='200'>
         Tu navegador no soporta canvas
     </canvas>
     <script type="text/javascript">
@@ -20,12 +20,22 @@
             var canvas = document.getElementById('micanvas');
             var ctx = canvas.getContext('2d');
             console.log(ctx);
+            ctx.globalAlpha = 0.5;
             ctx.fillStyle = 'red';
             ctx.fillRect(20,20,50,50);
             ctx.fillStyle = 'blue';
             ctx.fillRect(40,40,50,50);
             ctx.strokeStyle = 'red';
             ctx.strokeRect(90,90,50,50);
+            ctx.fillStyle = 'rgba(250,0,0,0.5)';
+            ctx.fillRect(140,20,50,50);
+            ctx.fillStyle = 'rgba(250,0,0,0.7)';
+            ctx.fillRect(200,20,50,50);
+            ctx.fillStyle = 'rgba(250,0,0,0.9)';
+            ctx.fillRect(260,20,50,50);
+            ctx.lineWidth = 3;
+            ctx.strokeRect(150,90,50,50);
+
         }
     </script>
 </body>
