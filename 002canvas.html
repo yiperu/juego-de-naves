@@ -19,9 +19,13 @@
         function init(){
             var canvas = document.getElementById('micanvas');
             var ctx = canvas.getContext('2d');
+            console.log(ctx);
+            ctx.fillStyle = 'red';
             ctx.fillRect(20,20,50,50);
-
-            console.log("Cargado");
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(40,40,50,50);
+            ctx.strokeStyle = 'red';
+            ctx.strokeRect(90,90,50,50);
         }
     </script>
 </body>
