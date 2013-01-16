@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+    </title>
+    <style type="text/css">
+        canvas{
+            border:solid;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    var arreglo = ['a','b','c'];
+    window.addEventListener('load',init);
+    function init(){
+        console.log("El primer elemento es: "+arreglo[0]);
+        console.log(arreglo.length);
+        console.log(arreglo[arreglo.length-1]);
+
+        // Ahora veremos 3 formas de acceder a los elementos de un arreglo
+        // De manera descendente
+        console.log("Descendente");
+        for (var i = arreglo.length - 1; i >= 0; i--) {
+            console.log(arreglo[i]);
+        };
+
+        // De manera ascendente
+        console.log("Ascendente");
+        for (var i = 0; i < arreglo.length; i++) {
+            console.log(arreglo[i]);
+        };
+        // Usando for in
+        console.log("for in");
+        for(i in arreglo){
+            console.log(arreglo[i]);
+        }
+        // Agregando elementos al arreglo
+        console.log("Agregando otros elemento");
+        arreglo.push('d');
+        arreglo.push('e');
+        arreglo.push('f');
+        for(i in arreglo){
+            console.log(arreglo[i]);
+        }
+    }
+</script>
+
+</body>
+</html>
